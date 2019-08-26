@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t <dockeruser/nameofproject> .
-  - docker images <dockeruser/nameofproject>
+  - docker build -t saifullah/travis .
+  - docker images saifullah/travis
 
 before_deploy:
-  - docker login -u <username>  -p <userpassword>
+  - docker login -u saifullah  -p Guru99@123
 
 deploy:
   provider: script
-  script: docker push <dockeruser/nameofproject>
+  script: docker push saifullah/travis
   on:
     branch: master
