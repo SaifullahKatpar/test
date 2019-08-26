@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t saifullah/travis .
-  - docker images saifullah/travis
+  - docker build -t saifullahkatpar/travis .
+  - docker images saifullahkatpar/travis
 
 before_deploy:
-  - docker login -u saifullah  -p Guru99@123
+  - docker login -u saifullahkatpar  -p Guru99@123
 
 deploy:
   provider: script
-  script: docker push saifullah/travis
+  script: docker push saifullahkatpar/travis
   on:
     branch: master
